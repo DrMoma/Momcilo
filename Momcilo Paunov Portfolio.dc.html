@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07090B;-webkit-font-smoothing:antialiased}
+a{color:#D9BC94;text-decoration:none}
+a:hover{color:#F4EFE6}
+@keyframes mpUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes mpFade{from{opacity:0}to{opacity:1}}
+@keyframes mpSheet{from{transform:translateY(110%)}to{transform:none}}
+::-webkit-scrollbar{width:0}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;justify-content:center;background:#07090B;font-family:'Schibsted Grotesk',system-ui,sans-serif;color:#F4EFE6">
+<div style="position:relative;width:100%;max-width:460px;min-height:100vh;background:#0B0F12;padding-bottom:112px;overflow:hidden;box-shadow:0 0 120px rgba(0,0,0,.8)">
+
+<div style="position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(11,15,18,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:26px;height:26px;border-radius:50%;background:#D9BC94;display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;color:#0B0F12;letter-spacing:.02em">MP</div>
+<span style="font-size:12.5px;font-weight:500;letter-spacing:.01em">Momcilo Paunov</span>
+</div>
+<span style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,239,230,.5)">Drammen, NO</span>
+</div>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div style="animation:mpFade .4s ease both">
+
+<div style="position:relative;height:600px;overflow:hidden">
+<img src="uploads/pasted-1789842245109-0.png" alt="Momcilo Paunov" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 22%;filter:saturate(.92) contrast(1.05)">
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,15,18,.55) 0%,rgba(11,15,18,.05) 30%,rgba(11,15,18,.72) 68%,#0B0F12 100%)"></div>
+<div style="position:absolute;left:0;right:0;bottom:0;padding:0 22px 30px;display:flex;flex-direction:column;gap:14px;animation:mpUp .6s ease both">
+<span style="font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#D9BC94">Web designer &amp; developer</span>
+<h1 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(46px,14vw,62px);line-height:.92;letter-spacing:-.01em">Momcilo<br>Paunov.</h1>
+<p style="margin:0;font-size:14.5px;line-height:1.55;color:rgba(244,239,230,.82);text-wrap:pretty;max-width:34ch">I run <strong style="font-weight:600;color:#F4EFE6">Brand Layer</strong>, an agency that has shipped 50+ sites for photographers, filmmakers and agencies — and I build my own brands on the side. Designing, launching and running a business teaches things a brief never will.</p>
+<div style="display:flex;gap:10px;margin-top:4px">
+<button type="button" onClick="{{ openSheet }}" style="flex:1;padding:14px 18px;border:none;border-radius:999px;background:#D9BC94;color:#0B0F12;font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;min-height:46px" style-hover="background:#F4EFE6">Let's talk</button>
+<button type="button" onClick="{{ goWork }}" style="flex:1;padding:14px 18px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.06);backdrop-filter:blur(12px);color:#F4EFE6;font-family:inherit;font-size:13.5px;font-weight:500;cursor:pointer;min-height:46px" style-hover="background:rgba(255,255,255,.13)">The brands</button>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);margin:6px 0 0;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)">
+<div style="background:#0B0F12;padding:18px 12px;display:flex;flex-direction:column;gap:5px;align-items:center">
+<span style="font-family:'Instrument Serif',serif;font-size:27px;line-height:1">50+</span>
+<span style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,239,230,.48)">Sites</span>
+</div>
+<div style="background:#0B0F12;padding:18px 12px;display:flex;flex-direction:column;gap:5px;align-items:center">
+<span style="font-family:'Instrument Serif',serif;font-size:27px;line-height:1">3</span>
+<span style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,239,230,.48)">Brands</span>
+</div>
+<div style="background:#0B0F12;padding:18px 12px;display:flex;flex-direction:column;gap:5px;align-items:center">
+<span style="font-family:'Instrument Serif',serif;font-size:27px;line-height:1">2023</span>
+<span style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,239,230,.48)">Founded</span>
+</div>
+</div>
+
+<div style="padding:30px 20px 8px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,239,230,.42)">What I run</span>
+<div style="display:flex;flex-direction:column;gap:10px">
+<button type="button" onClick="{{ goWork }}" style="display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;text-align:left;padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.045);color:#F4EFE6;font-family:inherit;cursor:pointer;min-height:64px" style-hover="background:rgba(255,255,255,.1)">
+<span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;font-weight:600">Brand Layer</span><span style="font-size:12px;color:rgba(244,239,230,.55)">Web design &amp; development</span></span>
+<span style="color:#D9BC94;font-size:17px">→</span>
+</button>
+<button type="button" onClick="{{ goWork }}" style="display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;text-align:left;padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.045);color:#F4EFE6;font-family:inherit;cursor:pointer;min-height:64px" style-hover="background:rgba(255,255,255,.1)">
+<span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;font-weight:600">Perlemor</span><span style="font-size:12px;color:rgba(244,239,230,.55)">Modern Scandinavian jewelry</span></span>
+<span style="color:#D9BC94;font-size:17px">→</span>
+</button>
+<button type="button" onClick="{{ goWork }}" style="display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;text-align:left;padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.045);color:#F4EFE6;font-family:inherit;cursor:pointer;min-height:64px" style-hover="background:rgba(255,255,255,.1)">
+<span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;font-weight:600">LANDR</span><span style="font-size:12px;color:rgba(244,239,230,.55)">Snowboard &amp; ski equipment</span></span>
+<span style="color:#D9BC94;font-size:17px">→</span>
+</button>
+</div>
+</div>
+
+<div style="padding:32px 20px 10px">
+<p style="margin:0;font-family:'Instrument Serif',serif;font-size:26px;line-height:1.25;letter-spacing:-.01em;text-wrap:pretty">Building something of your own? <em style="color:#D9BC94">That's the work I like most.</em></p>
+<button type="button" onClick="{{ openSheet }}" style="margin-top:20px;width:100%;padding:16px;border:none;border-radius:999px;background:#D9BC94;color:#0B0F12;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;min-height:48px" style-hover="background:#F4EFE6">Let's talk</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isWork }}" hint-placeholder-val="{{ true }}">
+<div style="padding:28px 20px 12px;display:flex;flex-direction:column;gap:20px;animation:mpFade .35s ease both">
+<div style="display:flex;flex-direction:column;gap:9px">
+<span style="font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#D9BC94">Three brands</span>
+<h2 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:38px;line-height:1.02;letter-spacing:-.01em">The work,<br>end to end.</h2>
+<p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(244,239,230,.62);max-width:36ch;text-wrap:pretty">One agency, two of my own brands. Tap a card for the detail.</p>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+
+<div style="border:1px solid rgba(255,255,255,.1);border-radius:22px;background:linear-gradient(160deg,rgba(217,188,148,.14),rgba(255,255,255,.035));overflow:hidden">
+<button type="button" onClick="{{ toggle0 }}" style="display:flex;width:100%;text-align:left;gap:14px;align-items:flex-start;padding:20px;border:none;background:transparent;color:#F4EFE6;font-family:inherit;cursor:pointer">
+<span style="font-size:10.5px;letter-spacing:.12em;color:rgba(244,239,230,.42);padding-top:5px">01</span>
+<span style="flex:1;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:21px;font-weight:600;letter-spacing:-.01em">Brand Layer</span>
+<span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#D9BC94">Web design &amp; development</span>
+<span style="font-size:13.5px;line-height:1.6;color:rgba(244,239,230,.72);text-wrap:pretty">Portfolio and business sites for creative professionals. Built in code, hosted on Vercel, designed to feel like the client and not like a template.</span>
+</span>
+<span style="color:#D9BC94;font-size:18px;padding-top:2px">＋</span>
+</button>
+<sc-if value="{{ open0 }}" hint-placeholder-val="{{ false }}">
+<div style="padding:0 20px 20px 48px;display:flex;flex-direction:column;gap:10px;animation:mpUp .3s ease both">
+<div style="height:1px;background:rgba(255,255,255,.1);margin-bottom:4px"></div>
+<span style="font-size:13px;line-height:1.6;color:rgba(244,239,230,.72)">50+ projects delivered for photographers, filmmakers and agencies since 2023.</span>
+<span style="font-size:13px;line-height:1.6;color:rgba(244,239,230,.72)">Scope: identity, art direction, UX, front-end build, hosting and handover.</span>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px">
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">Identity</span>
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">Typography</span>
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">Front-end</span>
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">Vercel</span>
+</div>
+<a href="https://brandlayer.no" target="_blank" rel="noopener" style="font-size:12.5px;font-weight:600;margin-top:4px">brandlayer.no →</a>
+</div>
+</sc-if>
+</div>
+
+<div style="border:1px solid rgba(255,255,255,.1);border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.03));overflow:hidden">
+<button type="button" onClick="{{ toggle1 }}" style="display:flex;width:100%;text-align:left;gap:14px;align-items:flex-start;padding:20px;border:none;background:transparent;color:#F4EFE6;font-family:inherit;cursor:pointer">
+<span style="font-size:10.5px;letter-spacing:.12em;color:rgba(244,239,230,.42);padding-top:5px">02</span>
+<span style="flex:1;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:21px;font-weight:600;letter-spacing:-.01em">Perlemor</span>
+<span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#D9BC94">Modern Scandinavian jewelry</span>
+<span style="font-size:13.5px;line-height:1.6;color:rgba(244,239,230,.72);text-wrap:pretty">A Norwegian jewelry brand for everyday elegance. Waterproof, tarnish-resistant, timeless.</span>
+</span>
+<span style="color:#D9BC94;font-size:18px;padding-top:2px">＋</span>
+</button>
+<sc-if value="{{ open1 }}" hint-placeholder-val="{{ false }}">
+<div style="padding:0 20px 20px 48px;display:flex;flex-direction:column;gap:10px;animation:mpUp .3s ease both">
+<div style="height:1px;background:rgba(255,255,255,.1);margin-bottom:4px"></div>
+<span style="font-size:13px;line-height:1.6;color:rgba(244,239,230,.72)">Built end to end: brand identity, storefront, pricing, product photography, content and paid social.</span>
+<span style="font-size:13px;line-height:1.6;color:rgba(244,239,230,.72)">From name to first order — including UGC partnerships and the customer emails.</span>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px">
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">Identity</span>
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">E-commerce</span>
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">Photography</span>
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">Paid social</span>
+</div>
+</div>
+</sc-if>
+</div>
+
+<div style="border:1px solid rgba(255,255,255,.1);border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.03));overflow:hidden">
+<button type="button" onClick="{{ toggle2 }}" style="display:flex;width:100%;text-align:left;gap:14px;align-items:flex-start;padding:20px;border:none;background:transparent;color:#F4EFE6;font-family:inherit;cursor:pointer">
+<span style="font-size:10.5px;letter-spacing:.12em;color:rgba(244,239,230,.42);padding-top:5px">03</span>
+<span style="flex:1;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:21px;font-weight:600;letter-spacing:-.01em">LANDR</span>
+<span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#D9BC94">Snowboard &amp; ski equipment</span>
+<span style="font-size:13.5px;line-height:1.6;color:rgba(244,239,230,.72);text-wrap:pretty">A gear brand run in partnership with Niklas. I lead the website, technical development and design.</span>
+</span>
+<span style="color:#D9BC94;font-size:18px;padding-top:2px">＋</span>
+</button>
+<sc-if value="{{ open2 }}" hint-placeholder-val="{{ false }}">
+<div style="padding:0 20px 20px 48px;display:flex;flex-direction:column;gap:10px;animation:mpUp .3s ease both">
+<div style="height:1px;background:rgba(255,255,255,.1);margin-bottom:4px"></div>
+<span style="font-size:13px;line-height:1.6;color:rgba(244,239,230,.72)">From the storefront to the ad creative — web, technical side and design.</span>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px">
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">Web</span>
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">Development</span>
+<span style="font-size:11px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)">Ad creative</span>
+</div>
+</div>
+</sc-if>
+</div>
+</div>
+
+<button type="button" onClick="{{ openSheet }}" style="margin-top:8px;width:100%;padding:16px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.06);color:#F4EFE6;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;min-height:48px" style-hover="background:rgba(255,255,255,.13)">Start a project</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ isCv }}" hint-placeholder-val="{{ false }}">
+<div style="padding:28px 20px 12px;display:flex;flex-direction:column;gap:26px;animation:mpFade .35s ease both">
+<div style="display:flex;flex-direction:column;gap:9px">
+<span style="font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#D9BC94">CV · updated Jul 2026</span>
+<h2 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:38px;line-height:1.02">Experience.</h2>
+<p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(244,239,230,.62);text-wrap:pretty">Sales-driven, solution-oriented designer and founder, based in Drammen. Running Brand Layer alongside my final year of upper secondary.</p>
+</div>
+
+<div style="display:flex;flex-direction:column">
+<div style="display:grid;grid-template-columns:62px 1fr;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.1)">
+<span style="font-size:11.5px;color:#D9BC94;letter-spacing:.04em;padding-top:2px">2023 —</span>
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14.5px;font-weight:600">Founder &amp; Designer</span><span style="font-size:12.5px;color:rgba(244,239,230,.55)">Brand Layer · Drammen / Remote</span></span>
+</div>
+<div style="display:grid;grid-template-columns:62px 1fr;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.1)">
+<span style="font-size:11.5px;color:rgba(244,239,230,.45);padding-top:2px">2026</span>
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14.5px;font-weight:600">Lifeguard (summer)</span><span style="font-size:12.5px;color:rgba(244,239,230,.55)">Tusenfryd · Vinterbro</span></span>
+</div>
+<div style="display:grid;grid-template-columns:62px 1fr;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.1)">
+<span style="font-size:11.5px;color:rgba(244,239,230,.45);padding-top:2px">2025—26</span>
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14.5px;font-weight:600">Receptionist (part-time)</span><span style="font-size:12.5px;color:rgba(244,239,230,.55)">Spinnvill Fitness Center · Drammen</span></span>
+</div>
+<div style="display:grid;grid-template-columns:62px 1fr;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.1)">
+<span style="font-size:11.5px;color:rgba(244,239,230,.45);padding-top:2px">2024—25</span>
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14.5px;font-weight:600">Managing Director</span><span style="font-size:12.5px;color:rgba(244,239,230,.55)">Frukt for Deg (student venture)</span></span>
+</div>
+<div style="display:grid;grid-template-columns:62px 1fr;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.1)">
+<span style="font-size:11.5px;color:rgba(244,239,230,.45);padding-top:2px">2024</span>
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14.5px;font-weight:600">Receptionist (apprentice)</span><span style="font-size:12.5px;color:rgba(244,239,230,.55)">Vestlia Resort · Geilo</span></span>
+</div>
+<div style="display:grid;grid-template-columns:62px 1fr;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.1)">
+<span style="font-size:11.5px;color:rgba(244,239,230,.45);padding-top:2px">2024</span>
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14.5px;font-weight:600">Sales (apprentice)</span><span style="font-size:12.5px;color:rgba(244,239,230,.55)">Monster Bike · Drammen</span></span>
+</div>
+<div style="display:grid;grid-template-columns:62px 1fr;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.1)">
+<span style="font-size:11.5px;color:rgba(244,239,230,.45);padding-top:2px">2023—24</span>
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14.5px;font-weight:600">Finance Lead</span><span style="font-size:12.5px;color:rgba(244,239,230,.55)">Bæreklassen (student venture)</span></span>
+</div>
+<div style="display:grid;grid-template-columns:62px 1fr;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">
+<span style="font-size:11.5px;color:rgba(244,239,230,.45);padding-top:2px">2023</span>
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14.5px;font-weight:600">Sales (apprentice)</span><span style="font-size:12.5px;color:rgba(244,239,230,.55)">Elvebyen Sykkel og Hage</span></span>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<span style="font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,239,230,.42)">Education</span>
+<div style="display:flex;flex-direction:column;gap:12px;padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(255,255,255,.04)">
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14px;font-weight:600">General Studies Supplement (VG3)</span><span style="font-size:12.5px;color:rgba(244,239,230,.55)">Akademiet Ypsilon · Drammen — ongoing</span></span>
+<div style="height:1px;background:rgba(255,255,255,.08)"></div>
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14px;font-weight:600">Sales, Service &amp; Tourism</span><span style="font-size:12.5px;color:rgba(244,239,230,.55)">Drammen VGS</span></span>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<span style="font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,239,230,.42)">Skills</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<span style="font-size:12px;padding:8px 13px;border-radius:999px;background:rgba(217,188,148,.14);border:1px solid rgba(217,188,148,.3);color:#EFD9B8">Identity &amp; art direction</span>
+<span style="font-size:12px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)">Typography</span>
+<span style="font-size:12px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)">Product &amp; web design</span>
+<span style="font-size:12px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)">Finance &amp; sales</span>
+<span style="font-size:12px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)">Customer service</span>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<span style="font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,239,230,.42)">Languages</span>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+<div style="padding:14px 10px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.04);display:flex;flex-direction:column;gap:4px;align-items:center"><span style="font-size:13px;font-weight:600">Norsk</span><span style="font-size:10.5px;color:rgba(244,239,230,.5)">Native</span></div>
+<div style="padding:14px 10px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.04);display:flex;flex-direction:column;gap:4px;align-items:center"><span style="font-size:13px;font-weight:600">Srpski</span><span style="font-size:10.5px;color:rgba(244,239,230,.5)">Native</span></div>
+<div style="padding:14px 10px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.04);display:flex;flex-direction:column;gap:4px;align-items:center"><span style="font-size:13px;font-weight:600">English</span><span style="font-size:10.5px;color:rgba(244,239,230,.5)">Fluent</span></div>
+</div>
+</div>
+
+<a href="https://www.brandlayer.no/cv" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;padding:15px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.06);font-size:13.5px;font-weight:600;color:#F4EFE6;min-height:48px">Full CV on brandlayer.no →</a>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
+<div style="animation:mpFade .35s ease both">
+<div style="position:relative;height:240px;overflow:hidden">
+<img src="uploads/pasted-1789842245109-0.png" alt="Momcilo Paunov" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:saturate(.9)">
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,15,18,.35),rgba(11,15,18,.9) 75%,#0B0F12)"></div>
+<h2 style="position:absolute;left:20px;bottom:18px;margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:40px;line-height:1">About.</h2>
+</div>
+<div style="padding:22px 20px 12px;display:flex;flex-direction:column;gap:18px">
+<p style="margin:0;font-size:15px;line-height:1.65;color:rgba(244,239,230,.86);text-wrap:pretty">I started Brand Layer because creative people kept getting websites that looked like everyone else's. Fifty-plus projects later, I still care about the same thing: a site should feel like the person behind it.</p>
+<p style="margin:0;font-size:14px;line-height:1.7;color:rgba(244,239,230,.68);text-wrap:pretty">Running an agency taught me the craft. Running my own brands taught me the rest. <strong style="font-weight:600;color:#F4EFE6">Perlemor</strong> is a Norwegian jewelry brand I built from name to storefront, including the product photography, the ads, the UGC partnerships and the customer emails. <strong style="font-weight:600;color:#F4EFE6">LANDR</strong> is a snowboard and ski gear brand I run together with Niklas, where I handle the web, the technical side and the design. Every one of them has given me a problem an agency client would eventually hand me anyway.</p>
+<div style="padding:22px;border-radius:22px;border:1px solid rgba(217,188,148,.25);background:linear-gradient(150deg,rgba(217,188,148,.16),rgba(255,255,255,.03))">
+<p style="margin:0;font-family:'Instrument Serif',serif;font-size:25px;line-height:1.25;color:#F4EFE6">That's the difference I bring. <em style="color:#EFD9B8">I've been on both sides of the invoice.</em></p>
+</div>
+<div style="display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;margin-top:4px">
+<a href="mailto:hello@brandlayer.no" style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:#0B0F12;font-size:13.5px;color:#F4EFE6;min-height:52px" style-hover="background:rgba(255,255,255,.06)"><span style="color:rgba(244,239,230,.5);font-size:11px;letter-spacing:.14em;text-transform:uppercase">Email</span><span>hello@brandlayer.no</span></a>
+<a href="https://www.instagram.com/yourbrandlayer" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:#0B0F12;font-size:13.5px;color:#F4EFE6;min-height:52px" style-hover="background:rgba(255,255,255,.06)"><span style="color:rgba(244,239,230,.5);font-size:11px;letter-spacing:.14em;text-transform:uppercase">Instagram</span><span>@yourbrandlayer</span></a>
+<a href="https://brandlayer.no" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:#0B0F12;font-size:13.5px;color:#F4EFE6;min-height:52px" style-hover="background:rgba(255,255,255,.06)"><span style="color:rgba(244,239,230,.5);font-size:11px;letter-spacing:.14em;text-transform:uppercase">Studio</span><span>brandlayer.no</span></a>
+</div>
+<button type="button" onClick="{{ openSheet }}" style="width:100%;padding:16px;border:none;border-radius:999px;background:#D9BC94;color:#0B0F12;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;min-height:48px" style-hover="background:#F4EFE6">Let's talk</button>
+<p style="margin:6px 0 0;text-align:center;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,239,230,.32)">Drammen, Norway · 2026</p>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ sheetOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:60;display:flex;justify-content:center;align-items:flex-end;background:rgba(5,7,9,.62);backdrop-filter:blur(6px);animation:mpFade .25s ease both" onClick="{{ closeSheet }}">
+<div style="width:100%;max-width:460px;background:#12181D;border-top:1px solid rgba(255,255,255,.12);border-radius:28px 28px 0 0;padding:14px 20px 28px;display:flex;flex-direction:column;gap:14px;animation:mpSheet .32s cubic-bezier(.22,1,.36,1) both" onClick="{{ stop }}">
+<div style="width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.2);align-self:center"></div>
+<h3 style="margin:6px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1.1">Let's talk.</h3>
+<p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(244,239,230,.65);text-wrap:pretty">Tell me what you're building. I reply within a day.</p>
+<a href="mailto:hello@brandlayer.no" style="display:flex;align-items:center;justify-content:center;padding:16px;border-radius:999px;background:#D9BC94;color:#0B0F12;font-size:14px;font-weight:600;min-height:48px">hello@brandlayer.no</a>
+<a href="https://www.instagram.com/yourbrandlayer" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;padding:16px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#F4EFE6;font-size:14px;font-weight:500;min-height:48px">DM on Instagram</a>
+<button type="button" onClick="{{ closeSheet }}" style="padding:12px;border:none;background:transparent;color:rgba(244,239,230,.45);font-family:inherit;font-size:13px;cursor:pointer">Close</button>
+</div>
+</div>
+</sc-if>
+
+<div style="position:fixed;bottom:0;left:50%;transform:translateX(-50%);z-index:50;width:100%;max-width:460px;display:grid;grid-template-columns:repeat(4,1fr);padding:10px 12px 18px;background:rgba(11,15,18,.82);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-top:1px solid rgba(255,255,255,.09)">
+<button type="button" onClick="{{ goHome }}" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:9px 0;border:none;background:transparent;color:#F4EFE6;font-family:inherit;font-size:11.5px;font-weight:500;cursor:pointer;min-height:46px">
+<span style="width:5px;height:5px;border-radius:50%;background:transparent"><sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}"><span style="display:block;width:5px;height:5px;border-radius:50%;background:#D9BC94"></span></sc-if></span>
+<span>Home</span>
+</button>
+<button type="button" onClick="{{ goWork }}" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:9px 0;border:none;background:transparent;color:#F4EFE6;font-family:inherit;font-size:11.5px;font-weight:500;cursor:pointer;min-height:46px">
+<span style="width:5px;height:5px;border-radius:50%;background:transparent"><sc-if value="{{ isWork }}" hint-placeholder-val="{{ false }}"><span style="display:block;width:5px;height:5px;border-radius:50%;background:#D9BC94"></span></sc-if></span>
+<span>Work</span>
+</button>
+<button type="button" onClick="{{ goCv }}" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:9px 0;border:none;background:transparent;color:#F4EFE6;font-family:inherit;font-size:11.5px;font-weight:500;cursor:pointer;min-height:46px">
+<span style="width:5px;height:5px;border-radius:50%;background:transparent"><sc-if value="{{ isCv }}" hint-placeholder-val="{{ false }}"><span style="display:block;width:5px;height:5px;border-radius:50%;background:#D9BC94"></span></sc-if></span>
+<span>CV</span>
+</button>
+<button type="button" onClick="{{ goAbout }}" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:9px 0;border:none;background:transparent;color:#F4EFE6;font-family:inherit;font-size:11.5px;font-weight:500;cursor:pointer;min-height:46px">
+<span style="width:5px;height:5px;border-radius:50%;background:transparent"><sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}"><span style="display:block;width:5px;height:5px;border-radius:50%;background:#D9BC94"></span></sc-if></span>
+<span>About</span>
+</button>
+</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { tab: 'home', open: -1, sheet: false };
+  go(tab) {
+    this.setState({ tab, open: -1 });
+    if (typeof window !== 'undefined') window.scrollTo(0, 0);
+  }
+  renderVals() {
+    const t = this.state.tab;
+    return {
+      isHome: t === 'home', isWork: t === 'work', isCv: t === 'cv', isAbout: t === 'about',
+      goHome: () => this.go('home'), goWork: () => this.go('work'),
+      goCv: () => this.go('cv'), goAbout: () => this.go('about'),
+      open0: this.state.open === 0, open1: this.state.open === 1, open2: this.state.open === 2,
+      toggle0: () => this.setState(s => ({ open: s.open === 0 ? -1 : 0 })),
+      toggle1: () => this.setState(s => ({ open: s.open === 1 ? -1 : 1 })),
+      toggle2: () => this.setState(s => ({ open: s.open === 2 ? -1 : 2 })),
+      sheetOpen: this.state.sheet,
+      openSheet: () => this.setState({ sheet: true }),
+      closeSheet: () => this.setState({ sheet: false }),
+      stop: (e) => e.stopPropagation()
+    };
+  }
+}
+</script>
+</body>
+</html>
