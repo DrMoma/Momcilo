@@ -20,17 +20,28 @@ a:hover{color:#D9BC94}
 @keyframes mpFade{from{opacity:0}to{opacity:1}}
 @keyframes mpSheet{from{transform:translateY(110%)}to{transform:none}}
 ::-webkit-scrollbar{width:0}
+.mp-frame{display:contents}
+@media (min-width:900px){
+body{background:#f0f0f3}
+.mp-stage{background:radial-gradient(120% 90% at 50% 0%,#fff 0%,#f5f5f7 48%,#eaeaee 100%)!important;align-items:center;padding:28px 20px;box-sizing:border-box}
+.mp-frame{display:block!important;position:relative;flex:none;height:min(870px,calc(100vh - 56px));aspect-ratio:416/870;border:13px solid #0c0c0e;box-sizing:border-box;background:#070809;border-radius:62px;overflow:hidden;transform:translateZ(0);box-shadow:0 1px 2px rgba(0,0,0,.18),0 40px 80px -24px rgba(16,18,24,.45),0 0 0 1.5px rgba(255,255,255,.14) inset}
+.mp-frame::after{content:'';position:absolute;top:12px;left:50%;transform:translateX(-50%);width:125px;height:36px;border-radius:999px;background:#000;z-index:80;pointer-events:none}
+.mp-phone{width:100%!important;max-width:none!important;height:100%!important;min-height:0!important;padding-bottom:0!important;box-sizing:border-box}
+.mp-scroll{height:100%;box-sizing:border-box;padding-top:34px;padding-bottom:132px;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;overscroll-behavior:contain}
+.mp-backdrop{height:100%!important}
+}
 </style>
 </helmet>
-<div style="min-height:100vh;display:flex;justify-content:center;background:#07090B;font-family:'Schibsted Grotesk',system-ui,sans-serif;color:#F5F2ED">
-<div style="position:relative;width:100%;max-width:460px;min-height:100vh;padding-bottom:132px;overflow:hidden">
+<div class="mp-stage" style="min-height:100vh;display:flex;justify-content:center;background:#07090B;font-family:'Schibsted Grotesk',system-ui,sans-serif;color:#F5F2ED">
+<div class="mp-frame">
+<div class="mp-phone" style="position:relative;width:100%;max-width:460px;min-height:100vh;padding-bottom:132px;overflow:hidden">
 
-<div style="position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:460px;height:100vh;z-index:0;overflow:hidden;background:#070809">
-<img src="uploads/B2964D4A-90C2-404B-B0DA-BAD0BB1CE662.PNG" alt="Momcilo Paunov" style="position:absolute;top:0;left:0;width:100%;height:62%;object-fit:cover;object-position:56% 100%;transform:scale(1.28) translate(-2.5%,18%);transform-origin:56% 100%;filter:contrast(1.08) brightness(1.06)">
+<div class="mp-backdrop" style="position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:460px;height:100vh;z-index:0;overflow:hidden;background:#070809">
+<img src="uploads/B2964D4A-90C2-404B-B0DA-BAD0BB1CE662.PNG" alt="Momcilo Paunov" style="position:absolute;top:0;left:0;width:100%;height:62%;object-fit:cover;object-position:56% 100%;transform:scale(1.28) translate(-2.5%,25%);transform-origin:56% 100%;filter:contrast(1.08) brightness(1.06)">
 <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,9,.45) 0%,rgba(7,8,9,.05) 22%,rgba(7,8,9,.4) 40%,rgba(7,8,9,.9) 56%,#070809 64%,#070809 100%)"></div>
 </div>
 
-<div style="position:relative;z-index:10">
+<div class="mp-scroll" style="position:relative;z-index:10">
 
 <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px 0">
 <div style="display:flex;align-items:center;gap:9px;padding:9px 15px;border-radius:999px;background:rgba(255,255,255,.1);backdrop-filter:blur(24px) saturate(1.4);-webkit-backdrop-filter:blur(24px) saturate(1.4);border:1px solid rgba(255,255,255,.18)">
@@ -44,7 +55,7 @@ a:hover{color:#D9BC94}
 <div style="height:44vh;min-height:250px"></div>
 <div style="padding:0 14px;display:flex;flex-direction:column;gap:12px;animation:mpUp .55s cubic-bezier(.22,1,.36,1) both">
 
-<div style="padding:26px 22px 22px;border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 20px 50px rgba(0,0,0,.4);display:flex;flex-direction:column;gap:16px">
+<div style="padding:26px 22px 22px;border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 20px 50px rgba(0,0,0,.4);display:flex;flex-direction:column;gap:16px">
 <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(245,242,237,.68)">Web designer &amp; developer</span>
 <h1 style="margin:0;font-size:clamp(42px,12.5vw,54px);font-weight:700;line-height:.94;letter-spacing:-.035em">Momcilo<br>Paunov</h1>
 <p style="margin:0;font-size:14.5px;line-height:1.55;color:rgba(245,242,237,.86);text-wrap:pretty">Designer, developer and founder based in Ålesund. I build brands and the businesses around them — from the first idea to the storefront, the ads and the customer on the other end.</p>
@@ -59,7 +70,7 @@ a:hover{color:#D9BC94}
 </div>
 </div>
 
-<div style="padding:20px 20px 14px;border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:12px">
+<div style="padding:20px 20px 14px;border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:12px">
 <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(245,242,237,.55)">What I run</span>
 <div style="display:flex;flex-direction:column;gap:8px">
 <button type="button" onClick="{{ goWork }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;padding:15px 16px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.07);color:#F5F2ED;font-family:inherit;cursor:pointer;min-height:58px" style-hover="background:rgba(255,255,255,.16)">
@@ -78,7 +89,7 @@ a:hover{color:#D9BC94}
 <p style="margin:2px 0 0;font-size:11px;line-height:1.5;text-align:center;color:rgba(245,242,237,.42)">Designing, launching and running a business teaches things a brief never will.</p>
 </div>
 
-<div style="padding:20px 20px 18px;border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:12px">
+<div style="padding:20px 20px 18px;border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:12px">
 <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(245,242,237,.55)">Elsewhere</span>
 <div style="display:flex;flex-direction:column;gap:8px">
 <a href="https://www.instagram.com/paunov.mo/?hl=en" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.07);color:#F5F2ED;min-height:56px" style-hover="background:rgba(255,255,255,.16);color:#F5F2ED">
@@ -111,13 +122,13 @@ a:hover{color:#D9BC94}
 <div style="height:22vh;min-height:130px"></div>
 <div style="padding:0 14px;display:flex;flex-direction:column;gap:12px;animation:mpUp .5s cubic-bezier(.22,1,.36,1) both">
 
-<div style="padding:24px 22px;border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:10px">
+<div style="padding:24px 22px;border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:10px">
 <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(245,242,237,.6)">Three brands</span>
 <h2 style="margin:0;font-size:52px;font-weight:700;line-height:1;letter-spacing:-.04em">300%</h2>
 <p style="margin:0;font-size:13.5px;line-height:1.55;color:rgba(245,242,237,.68)">One agency, two stores. Tap a card for the details.</p>
 </div>
 
-<div style="border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);overflow:hidden">
+<div style="border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);overflow:hidden">
 <button type="button" onClick="{{ toggle0 }}" style="display:flex;width:100%;text-align:left;gap:14px;align-items:flex-start;padding:22px;border:none;background:transparent;color:#F5F2ED;font-family:inherit;cursor:pointer">
 <span style="font-size:10px;font-weight:600;letter-spacing:.1em;color:rgba(245,242,237,.45);padding-top:7px">01</span>
 <span style="flex:1;display:flex;flex-direction:column;gap:7px">
@@ -142,7 +153,7 @@ a:hover{color:#D9BC94}
 </sc-if>
 </div>
 
-<div style="border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);overflow:hidden">
+<div style="border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);overflow:hidden">
 <button type="button" onClick="{{ toggle1 }}" style="display:flex;width:100%;text-align:left;gap:14px;align-items:flex-start;padding:22px;border:none;background:transparent;color:#F5F2ED;font-family:inherit;cursor:pointer">
 <span style="font-size:10px;font-weight:600;letter-spacing:.1em;color:rgba(245,242,237,.45);padding-top:7px">02</span>
 <span style="flex:1;display:flex;flex-direction:column;gap:7px">
@@ -167,7 +178,7 @@ a:hover{color:#D9BC94}
 </sc-if>
 </div>
 
-<div style="border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);overflow:hidden">
+<div style="border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);overflow:hidden">
 <button type="button" onClick="{{ toggle2 }}" style="display:flex;width:100%;text-align:left;gap:14px;align-items:flex-start;padding:22px;border:none;background:transparent;color:#F5F2ED;font-family:inherit;cursor:pointer">
 <span style="font-size:10px;font-weight:600;letter-spacing:.1em;color:rgba(245,242,237,.45);padding-top:7px">03</span>
 <span style="flex:1;display:flex;flex-direction:column;gap:7px">
@@ -201,13 +212,13 @@ a:hover{color:#D9BC94}
 <div style="height:20vh;min-height:120px"></div>
 <div style="padding:0 14px;display:flex;flex-direction:column;gap:12px;animation:mpUp .5s cubic-bezier(.22,1,.36,1) both">
 
-<div style="padding:24px 22px;border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:10px">
+<div style="padding:24px 22px;border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:10px">
 <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(245,242,237,.6)">CV · updated Jul 2026</span>
 <h2 style="margin:0;font-size:36px;font-weight:700;line-height:1;letter-spacing:-.035em">Experience</h2>
 <p style="margin:0;font-size:13.5px;line-height:1.55;color:rgba(245,242,237,.68);text-wrap:pretty">Sales-driven, solution-oriented designer and founder based in Ålesund. Currently in my first year of college in Ålesund.</p>
 </div>
 
-<div style="padding:8px 22px 14px;border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column">
+<div style="padding:8px 22px 14px;border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column">
 <div style="display:grid;grid-template-columns:68px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1)">
 <span style="font-size:11.5px;font-weight:600;color:rgba(245,242,237,.5);padding-top:2px">2026</span>
 <span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:700;letter-spacing:-.02em">Lifeguard (summer)</span><span style="font-size:12.5px;color:rgba(245,242,237,.62)">Tusenfryd · Vinterbro</span></span>
@@ -238,14 +249,14 @@ a:hover{color:#D9BC94}
 </div>
 </div>
 
-<div style="padding:22px;border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:14px">
+<div style="padding:22px;border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:14px">
 <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(245,242,237,.55)">Education</span>
 <span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:700;letter-spacing:-.02em">College — first year</span><span style="font-size:12.5px;color:rgba(245,242,237,.62)">Ålesund — ongoing</span></span>
 <div style="height:1px;background:rgba(255,255,255,.1)"></div>
 <span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:700;letter-spacing:-.02em">Sales, Service &amp; Tourism</span><span style="font-size:12.5px;color:rgba(245,242,237,.62)">Drammen VGS</span></span>
 </div>
 
-<div style="padding:22px;border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:14px">
+<div style="padding:22px;border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:14px">
 <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(245,242,237,.55)">Skills</span>
 <div style="display:flex;flex-wrap:wrap;gap:8px">
 <span style="font-size:12px;font-weight:500;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18)">Identity &amp; art direction</span>
@@ -272,20 +283,20 @@ a:hover{color:#D9BC94}
 <div style="height:30vh;min-height:170px"></div>
 <div style="padding:0 14px;display:flex;flex-direction:column;gap:12px;animation:mpUp .5s cubic-bezier(.22,1,.36,1) both">
 
-<div style="padding:26px 22px;border-radius:30px;background:rgba(16,19,22,.5);backdrop-filter:blur(32px) saturate(1.5);-webkit-backdrop-filter:blur(32px) saturate(1.5);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:16px">
+<div style="padding:26px 22px;border-radius:30px;background:rgba(10,12,14,.42);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);display:flex;flex-direction:column;gap:16px">
 <h2 style="margin:0;font-size:42px;font-weight:700;line-height:.95;letter-spacing:-.035em">About</h2>
 <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(245,242,237,.9);text-wrap:pretty">I started Brand Layer because creative people kept getting websites that looked like everyone else's. Fifteen projects later, I still care about the same thing: a site should feel like the person behind it.</p>
 <p style="margin:0;font-size:14px;line-height:1.65;color:rgba(245,242,237,.72);text-wrap:pretty">Running an agency taught me the craft. Running my own brands taught me the rest. <strong style="font-weight:700;color:#F5F2ED">Perlemor</strong> is a Norwegian jewelry brand I built from name to storefront, including the product photography, the ads, the UGC partnerships and the customer emails. <strong style="font-weight:700;color:#F5F2ED">LANDR</strong> is a snowboard and ski gear brand I run together with Niklas, where I handle the web, the technical side and the design. Every one of them has given me a problem an agency client would eventually hand me anyway.</p>
 </div>
 
-<div style="padding:20px 22px;border-radius:24px;background:rgba(16,19,22,.4);backdrop-filter:blur(28px) saturate(1.4);-webkit-backdrop-filter:blur(28px) saturate(1.4);border:1px solid rgba(255,255,255,.12)">
+<div style="padding:20px 22px;border-radius:24px;background:rgba(10,12,14,.34);border:1px solid rgba(255,255,255,.12)">
 <p style="margin:0;font-size:15px;font-weight:500;line-height:1.55;color:rgba(245,242,237,.78);text-wrap:pretty">That's the difference I bring — I've been on both sides of the invoice.</p>
 </div>
 
 <div style="display:flex;flex-direction:column;gap:1px;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.12)">
-<a href="https://www.instagram.com/paunov.mo/?hl=en" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(16,19,22,.6);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);font-size:13.5px;font-weight:600;color:#F5F2ED;min-height:54px" style-hover="background:rgba(255,255,255,.14);color:#F5F2ED"><span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,242,237,.55)">Instagram</span><span>paunov.mo</span></a>
-<a href="https://www.tiktok.com/@m.paunov" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(16,19,22,.6);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);font-size:13.5px;font-weight:600;color:#F5F2ED;min-height:54px" style-hover="background:rgba(255,255,255,.14);color:#F5F2ED"><span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,242,237,.55)">TikTok</span><span>m.paunov</span></a>
-<a href="mailto:momcilo.paunov@gmail.com" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(16,19,22,.6);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);font-size:13.5px;font-weight:600;color:#F5F2ED;min-height:54px" style-hover="background:rgba(255,255,255,.14);color:#F5F2ED"><span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,242,237,.55)">Email</span><span>momcilo.paunov@gmail.com</span></a>
+<a href="https://www.instagram.com/paunov.mo/?hl=en" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(10,12,14,.5);font-size:13.5px;font-weight:600;color:#F5F2ED;min-height:54px" style-hover="background:rgba(255,255,255,.14);color:#F5F2ED"><span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,242,237,.55)">Instagram</span><span>paunov.mo</span></a>
+<a href="https://www.tiktok.com/@m.paunov" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(10,12,14,.5);font-size:13.5px;font-weight:600;color:#F5F2ED;min-height:54px" style-hover="background:rgba(255,255,255,.14);color:#F5F2ED"><span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,242,237,.55)">TikTok</span><span>m.paunov</span></a>
+<a href="mailto:momcilo.paunov@gmail.com" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(10,12,14,.5);font-size:13.5px;font-weight:600;color:#F5F2ED;min-height:54px" style-hover="background:rgba(255,255,255,.14);color:#F5F2ED"><span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,242,237,.55)">Email</span><span>momcilo.paunov@gmail.com</span></a>
 </div>
 
 <button type="button" onClick="{{ openSheet }}" style="width:100%;padding:17px;border:none;border-radius:16px;background:#F5F2ED;color:#0B0F12;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;min-height:50px" style-hover="background:#fff">Let's talk</button>
@@ -330,13 +341,18 @@ a:hover{color:#D9BC94}
 
 </div>
 </div>
+</div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   state = { tab: 'home', open: -1, sheet: false };
   go(tab) {
     this.setState({ tab, open: -1 });
-    if (typeof window !== 'undefined') window.scrollTo(0, 0);
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+      const screen = document.querySelector('.mp-scroll');
+      if (screen) screen.scrollTop = 0;
+    }
   }
   renderVals() {
     const t = this.state.tab;
